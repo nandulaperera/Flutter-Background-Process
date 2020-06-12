@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# first_app
+# Flutter-Background-Process (for Android)
 
 A new Flutter project.
 
@@ -16,5 +15,4 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 =======
-# Flutter-Background-Process (for Android)
->>>>>>> f7e8af66e4f2d642838a2d81854c40897540bcb3
+
