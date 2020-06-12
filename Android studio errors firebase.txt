@@ -1,0 +1,8 @@
+For AndroidX error add these in the gradle.properties file
+android.useAndroidX=true
+android.enableJetifier=true
+
+In the project level build.gradle file change
+classpath 'com.google.gms:google-services:4.3.2'
+to
+classpath 'com.google.gms:google-services:4.2.0'
