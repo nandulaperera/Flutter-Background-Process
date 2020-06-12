@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # first_app
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# Flutter-Background-Process (for Android)
+>>>>>>> f7e8af66e4f2d642838a2d81854c40897540bcb3
