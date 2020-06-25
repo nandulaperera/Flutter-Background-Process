@@ -1,44 +1,53 @@
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main(){
-  runApp(LoginApp());
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
 }
 
-class LoginApp extends StatelessWidget{
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
-  void startServiceInPlatform() async{
-    if(Platform.isAndroid){
-      var methodChannel = MethodChannel("com.example.first_app");
-      int data = await methodChannel.invokeMethod("startService");
-      print(data);
+class _MyHomePageState extends State<MyHomePage> {
+
+
+  void startServiceInPlatform() async {
+    if (Platform.isAndroid) {
+      var methodChannel = MethodChannel("com.example.messages");
+      String data = await methodChannel.invokeMethod("startService");
+      debugPrint(data);
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    String text = "Hello";
-    return MaterialApp(
-      title: "Login App",
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Login App"),
+    return Container(
+      color: Colors.white,
+      child: Center(
+        child: RaisedButton(
+            child: Text("Start Background"),
+            onPressed: () {
+              startServiceInPlatform();
+            }
+
         ),
-        body: Container(
-            alignment: Alignment.center,
-            child: RaisedButton(
-              child: Text("Login"),
-              onPressed: () {
-                startServiceInPlatform();
-              },
-            )
-        ),
-      )
+      ),
     );
   }
-
 }
