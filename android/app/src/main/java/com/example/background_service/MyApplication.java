@@ -1,11 +1,9 @@
-package com.example.first_app;
+package com.example.background_service;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
-import android.os.Bundle;
 
-import io.flutter.app.FlutterActivity;
 import io.flutter.app.FlutterApplication;
 
 public class MyApplication extends FlutterApplication {
@@ -14,7 +12,7 @@ public class MyApplication extends FlutterApplication {
     public void onCreate() {
         super.onCreate();
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel channel = new NotificationChannel("messages","Mesaages", NotificationManager.IMPORTANCE_LOW);
+            NotificationChannel channel = new NotificationChannel("messages","Messages", NotificationManager.IMPORTANCE_LOW);
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
