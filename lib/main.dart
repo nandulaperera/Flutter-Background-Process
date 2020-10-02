@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo for background task ',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: MyHomePage(),
     );
@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       color: Colors.white,
       child: Center(
         child: RaisedButton(
-            child: Text("Start Background"),
+            child: Text("Start Background for task"),
             onPressed: () {
               startServiceInPlatform();
             }
